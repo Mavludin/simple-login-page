@@ -1,0 +1,52 @@
+.PopUp {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 20px
+}
+
+.Overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(1,1,1, 0.4);
+    z-index: 1;
+}
+
+.PopUp div + div {
+    margin-top: 5px;
+}
+
+.PopUp input, button {
+    width: 100%;
+    padding: 5px;
+}
+
+.PopUp input {
+    border: 1px solid #ccc
+}
+
+.PopUp input:focus::placeholder {
+    color: transparent
+}
+
+.PopUp button {
+    background-color: darkgray;
+    border-radius: 5px;
+    font-weight: 900
+}
+
+.ErrorMessage {
+    font-size: 14px;
+    color: red
+}

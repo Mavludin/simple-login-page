@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState } from 'react';
 import './App.css';
+import { Header } from './components/Header/Header';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { News } from './containers/News/News';
+import { PopUp } from './components/PopUp/PopUp';
+import { HomePage } from './containers/HomePage/HomePage';
 
 function App() {
+
+  const [showPopUp, setShowPopUp] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header setShowPopUp={setShowPopUp} />
+        
+        {
+          showPopUp ? <PopUp setShowPopUp={setShowPopUp} /> : null
+        }
+        
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/news" component={News} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

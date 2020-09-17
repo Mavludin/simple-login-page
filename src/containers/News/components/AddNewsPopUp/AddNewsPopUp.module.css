@@ -1,4 +1,4 @@
-.PopUp {
+.AddNewsPopUp {
     width: 300px;
     padding: 20px;
     background-color: #fff;
@@ -23,24 +23,26 @@
     z-index: 1;
 }
 
-.PopUp div + div {
+.AddNewsPopUp div + div {
     margin-top: 5px;
 }
 
-.PopUp input {
-    width: 100%;
+.AddNewsPopUp input, .AddNewsPopUp button, .AddNewsPopUp textarea {
     padding: 5px;
-    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 14px;
     border-radius: 5px
 }
 
-.PopUp input:focus::placeholder {
+.AddNewsPopUp input:focus::placeholder {
     color: transparent
 }
 
-.PopUp form button {
-    width: 100%;
-    padding: 5px 0;
+.AddNewsPopUp button {
+    background-color: steelblue;
+    border-radius: 5px;
+    font-weight: 900;
+    border-radius: 10px;
 }
 
 .ErrorMessage {

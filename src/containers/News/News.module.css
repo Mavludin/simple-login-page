@@ -1,3 +1,20 @@
 .NewsPage {
     color: black
 }
+
+.NewsPage input {
+    border: 1px solid #ccc
+}
+
+.NewsItem {
+    color: black
+}
+
+.NotApproved h2{
+    color: red
+}
+
+.AddNewsBtn {
+    padding: 5px 10px;
+    font-size: 18px;
+}

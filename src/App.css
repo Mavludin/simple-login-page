@@ -14,12 +14,25 @@ a {
   text-decoration: none;
 }
 
-input, button {
+input, button, textarea {
   outline: unset;
   border: unset;
+  border: 1px solid #ccc;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 button {
   cursor: pointer
+}
+
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: steelblue;
+  font-weight: 900;
+  color: white;
+  border-radius: 10px;
 }

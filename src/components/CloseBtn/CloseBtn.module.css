@@ -1,0 +1,14 @@
+.closeBtn {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    cursor: pointer;
+}
+  
+.closeBtn img {
+    width: 100%;
+    height: 100%;
+}

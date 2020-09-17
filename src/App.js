@@ -15,14 +15,15 @@ function App() {
       <div className="App">
         <Header setShowPopUp={setShowPopUp} />
         
-        {
-          showPopUp ? <PopUp setShowPopUp={setShowPopUp} /> : null
-        }
+        { showPopUp ? <PopUp setShowPopUp={setShowPopUp} /> : null }
+
+        <main>        
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/news" component={News} />
+          </Switch>
+        </main>
         
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/news" component={News} />
-        </Switch>
       </div>
     </BrowserRouter>
   );

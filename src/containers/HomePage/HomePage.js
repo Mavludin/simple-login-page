@@ -5,8 +5,12 @@ import { useSelector } from 'react-redux';
 export const HomePage = () => {
 
     const isLoggedIn = useSelector(state => state.loggedInStatus);
-    const userInfo = JSON.parse(localStorage[('userInfo')])
-    const { userName } = userInfo;
+    let userInfo = {}, userName = '';
+
+    if (isLoggedIn) {
+        userInfo = JSON.parse(localStorage[('userInfo')]);
+        userName = userInfo.userName
+    }
 
     return (
         <div className={classes.HomePage}>

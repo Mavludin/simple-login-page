@@ -27,8 +27,8 @@ export const PopUp = ({ setShowPopUp }) => {
                 <Formik
                     initialValues={{ login: "", password: "" }}
                     onSubmit={()=>{
-                            dispatch(userLogIn());
                             localStorage.setItem('userInfo', JSON.stringify(loggedInUser))
+                            dispatch(userLogIn());
                             setShowPopUp(false);
                         }
                     }
@@ -40,6 +40,7 @@ export const PopUp = ({ setShowPopUp }) => {
                             if (users[i].userName === values.login && users[i].password === values.password) {
                                 flag = true;
                                 setLoggedInUser(users[i])
+                                console.log(users[i])
                                 break;
                             } else flag = false
                         }

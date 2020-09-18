@@ -29,9 +29,15 @@ export const News = () => {
                 !isLoggedIn && !item.approved ? null
                 :
                 <div key={item.id} className={classList}>
-                    <h2>{item.title}</h2>
+                    <h2>
+                        {item.title}
+                        {
+                           !item.approved ? <p>(Ожидает одобрения)</p>
+                            :null
+                        }
+                    </h2>
                     <p>{item.content}</p>
-                    <div>{item.date}</div>
+                    <div><span>Опубликовано: </span>{item.date}</div>
                     {
                         !item.approved && role === 'admin' 
                         ? <button type="button" onClick={()=>handleApproval(pos)}>Одобрить</button> 

@@ -26,13 +26,13 @@ button {
 }
 
 main {
-  max-width: 1140px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 button {
   background-color: steelblue;
-  font-weight: 900;
+  font-weight: 600;
   color: white;
   border-radius: 10px;
 }
